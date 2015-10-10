@@ -36,7 +36,7 @@
 		<iframe src="tree.html"></iframe>
         </div>
 	<div id="main">
-		<iframe name="MainFrame" src="main.html"></iframe>
+		<iframe name="MainFrame" src="main.jsp"></iframe>
 	</div>
 	<div id="footer">Copyright © 2009-2011 All Rights Reserved Powered By Nan Lei</div>
 </div>

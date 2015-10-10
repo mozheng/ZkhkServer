@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class server
  */
 
-public class Server extends HttpServlet {
+public class Server extends HttpServlet  implements Runnable{
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -40,8 +40,11 @@ public class Server extends HttpServlet {
 		// TODO Auto-generated method stub
 		 super.init(config);
 		System.out.println("init:");
-		new BioMultiThreadServer().service();
-
+		//new Server().run();
 	} 
+	public void run()
+	{
+		new BioMultiThreadServer().service();
+	}
 	
 }
