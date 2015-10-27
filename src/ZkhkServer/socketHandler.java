@@ -140,12 +140,12 @@ class socketHandler implements Runnable
 				String sql;
 				System.out.println(12);
 				Class.forName("org.sqlite.JDBC");
-				Connection connection = DriverManager.getConnection("jdbc:sqlite:JkServer.sqlite");
+				Connection connection = DriverManager.getConnection("jdbc:sqlite://c:/jkserver.sqlite");
 				Statement statement = connection.createStatement();
-				sql = "insert into dev values(' "+SN+ " ',"+high+","+low+","+ pulse+", ' "+time+ ",' "+getDate()+" ' );";
+				sql = "insert into dev values('"+SN+ "',"+high+","+low+","+ pulse+", '"+time+ "' ,'"+getDate()+"')";
 				System.out.println(sql);
 				statement.executeUpdate(sql);
-	
+				connection.close();
 			} catch (Exception e)
 			{
 				e.printStackTrace();
